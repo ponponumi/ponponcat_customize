@@ -12,6 +12,16 @@
 composer require ponponumi/ponponcat_customize
 ```
 
+## 呼び出し方法について
+
+functions.phpに、次のように入力してください。(autoload.phpへのパスは、必要に応じて修正してください)
+
+```php
+require_once __DIR__ . "/vendor/autoload.php";
+
+use Ponponumi\PonponcatCustomize\CustomizeOptionAdd;
+```
+
 ## ライセンスについて
 
 このパッケージは、GPL 2.0 (GNU GENERAL PUBLIC LICENSE 2.0)として作成されています。
