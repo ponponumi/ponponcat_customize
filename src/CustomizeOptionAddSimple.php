@@ -34,4 +34,10 @@ class CustomizeOptionAddSimple
 
         $this->customAdd->sectionSet($sectionName, $option);
     }
+
+    public function settingSet(string $settingName,array $controlOption, array $settingOption=[])
+    {
+        $settingName = $this->themeName . "_" . $this->panelName . "_" . $this->sectionName . "_" . $settingName;
+        $this->customAdd->settingSet($settingName, $controlOption, $settingOption);
+    }
 }
