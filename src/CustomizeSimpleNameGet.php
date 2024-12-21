@@ -8,7 +8,7 @@ class CustomizeSimpleNameGet
 
     public function __construct(string $themeName = "ponponcat")
     {
-        $this->themeName = $themeName;
+        $this->themeNameChange($themeName);
     }
 
     public function themeNameChange(string $themeName = "ponponcat")
