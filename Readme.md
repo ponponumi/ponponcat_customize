@@ -164,6 +164,19 @@ function custom_color_add($wp_custom){
 add_action('customize_register', 'custom_color_add');
 ```
 
+## CustomizeOptionAddSimpleクラス実行後の設定名の取得について
+
+次のコードで、簡単に取得できます。
+
+```php
+require_once __DIR__ . "/vendor/autoload.php";
+
+use Ponponumi\PonponcatCustomize\CustomizeSimpleNameGetStatic;
+
+$bodyTextColor = CustomizeSimpleNameGetStatic::get("test_theme","color","text","body");
+var_dump($bodyTextColor);   //
+```
+
 ## CustomizeOptionAddクラス、CustomizeOptionAddSimpleクラスの実行の注意点
 
 必ず、次の順で実行してください。
