@@ -41,6 +41,7 @@ function custom_color_add($wp_custom){
     ]);
 
     // メインカラーのセクションを追加
+    // この場合、test_theme_colorというパネルと連携されます。
     $custom->sectionSet("test_theme_color_main", [
         'title' => 'メインカラー設定',
     ]);
