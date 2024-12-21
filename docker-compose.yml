@@ -3,9 +3,6 @@ services:
         image: wordpress:php8.3-apache
         ports:
             - "${WP_PORT:-5110}:80"
-        build:
-            context: .
-            dockerfile: Dockerfile
         environment:
             WORDPRESS_DB_HOST: mysql
             WORDPRESS_DB_NAME: wordpress
