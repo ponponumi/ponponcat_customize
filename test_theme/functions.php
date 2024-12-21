@@ -61,7 +61,7 @@ function test_theme_custom_simple_add($wpCustom){
         'priority' => 154,
     ]);
 
-    // メインカラー
+    // ロゴ
     $custom->sectionSet("logo", [
         'title' => 'ロゴ設定',
     ]);
