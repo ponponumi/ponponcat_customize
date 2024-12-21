@@ -164,6 +164,19 @@ function custom_color_add($wp_custom){
 add_action('customize_register', 'custom_color_add');
 ```
 
+## CustomizeOptionAddクラス、CustomizeOptionAddSimpleクラスの実行の注意点
+
+必ず、次の順で実行してください。
+
+1. themeNameChangeメソッドを実行(CustomizeOptionAddSimpleクラスのみ)
+1. panelSetメソッドを実行
+1. sectionSetメソッドを実行
+1. settingSetメソッドを実行
+
+* 上記の順で実行しないと、エラーが起こります。
+* セッティングを追加後、同じセクションに再度セッティングを追加したい場合、そのままsettingSetメソッドを実行してください。
+* セッティングを追加後、同じパネルに再度セクションを追加したい場合、そのままsectionSetメソッドを実行してください。
+
 ## ライセンスについて
 
 このパッケージは、GPL 2.0 (GNU GENERAL PUBLIC LICENSE 2.0)として作成されています。
