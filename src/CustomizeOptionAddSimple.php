@@ -51,11 +51,7 @@ class CustomizeOptionAddSimple
     public function settingSet(string $settingName,array $controlOption, array $settingOption=[])
     {
         $settingName = $this->nameGet->get($this->panelName, $this->sectionName, $settingName);
-
-        if($this->settingNameEcho){
-            $controlOption["description"] = $controlOption["description"] ?? "";
-            $controlOption["description"] = "設定名は、'" . $settingName . "'です。<br>" . $controlOption["description"];
-        }
+        $controlOption = $this->settingNameAdd($controlOption,$settingName);
 
         $this->customAdd->settingSet($settingName, $controlOption, $settingOption);
     }
@@ -63,11 +59,7 @@ class CustomizeOptionAddSimple
     public function settingImageSet(string $settingName,array $controlOption, array $settingOption=[])
     {
         $settingName = $this->nameGet->get($this->panelName, $this->sectionName, $settingName);
-
-        if($this->settingNameEcho){
-            $controlOption["description"] = $controlOption["description"] ?? "";
-            $controlOption["description"] = "設定名は、'" . $settingName . "'です。<br>" . $controlOption["description"];
-        }
+        $controlOption = $this->settingNameAdd($controlOption,$settingName);
 
         $this->customAdd->settingImageSet($settingName, $controlOption, $settingOption);
     }
