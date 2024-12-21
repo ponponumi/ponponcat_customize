@@ -62,6 +62,10 @@ function test_theme_custom_add($wpCustom){
         'priority' => 155,
     ]);
 
+    $custom->sectionSet("test_theme_javascript_progress", [
+        'title' => '進捗バーの設定',
+    ]);
+
     $custom->settingSet("test_theme_javascript_progress_view", [
         'label' => '進捗バーの表示の設定',
         'type' => 'radio',
