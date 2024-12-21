@@ -26,4 +26,12 @@ class CustomizeOptionAddSimple
 
         $this->customAdd->panelSet($panelName, $option);
     }
+
+    public function sectionSet(string $sectionName,array $option)
+    {
+        $this->sectionName = $sectionName;
+        $sectionName = $this->themeName . "_" . $this->panelName . "_" . $sectionName;
+
+        $this->customAdd->sectionSet($sectionName, $option);
+    }
 }
