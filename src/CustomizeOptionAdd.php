@@ -38,7 +38,7 @@ class CustomizeOptionAdd
      */
     public function sectionSet(string $sectionName,array $option)
     {
-        $this->panelAndSectionNoSetError();
+        $this->panelNoSetError();
 
         $option["panel"] = $this->panelName;
         $option["priority"] = $this->sectionPriority;
