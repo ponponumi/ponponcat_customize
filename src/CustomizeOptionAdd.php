@@ -6,6 +6,7 @@ class CustomizeOptionAdd
 {
     private object $wpCustom;
     private string $panelName;
+    private string $sectionName;
     private int $sectionPriority = 1;
     private int $settingPriority = 1;
 
@@ -27,6 +28,8 @@ class CustomizeOptionAdd
 
         $this->sectionPriority++;
         $this->settingPriority = 1;
+
+        $this->sectionName = $sectionName;
 
         $this->wpCustom->add_section($sectionName, $option);
     }
