@@ -18,9 +18,9 @@ function test_theme_custom_add($wpCustom){
     // var_dump($custom->sectionNameGet());
 
     // メインカラー
-    // $custom->sectionSet("test_theme_color_main", [
-    //     'title' => 'メインカラー設定',
-    // ]);
+    $custom->sectionSet("test_theme_color_main", [
+        'title' => 'メインカラー設定',
+    ]);
 
     // var_dump($custom->panelNameGet());
     // var_dump($custom->sectionNameGet());
