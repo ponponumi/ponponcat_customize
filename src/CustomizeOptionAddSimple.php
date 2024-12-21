@@ -13,4 +13,9 @@ class CustomizeOptionAddSimple
     {
         $this->customAdd = new CustomizeOptionAdd($wpCustom);
     }
+
+    public function themeNameChange(string $themeName="ponponcat")
+    {
+        $this->themeName = $themeName;
+    }
 }
