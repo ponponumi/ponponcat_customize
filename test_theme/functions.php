@@ -4,6 +4,12 @@ require_once __DIR__ . "/vendor/autoload.php";
 
 use Ponponumi\PonponcatCustomize\CustomizeOptionAdd;
 use Ponponumi\PonponcatCustomize\CustomizeOptionAddSimple;
+use Ponponumi\PonponcatCustomize\CustomizeSimpleNameGetStatic;
+
+function setting_get_test(){
+    $bodyTextColor = CustomizeSimpleNameGetStatic::get("test_theme","color","text","body");
+    var_dump($bodyTextColor);
+}
 
 function test_theme_custom_add($wpCustom){
     $custom = new CustomizeOptionAdd($wpCustom);
