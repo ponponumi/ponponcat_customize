@@ -15,6 +15,13 @@ class CustomizeOptionAdd
         $this->wpCustom = $wpCustom;
     }
 
+    /**
+     * テーマカスタマイザーのパネルを設定します。
+     *
+     * @param string $panelName ここには、パネル名を入れてください。
+     * @param array $option ここには、オプションを入れてください。
+     * @return void
+     */
     public function panelSet(string $panelName,array $option)
     {
         $this->panelName = $panelName;
