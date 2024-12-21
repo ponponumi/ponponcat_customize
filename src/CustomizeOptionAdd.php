@@ -103,4 +103,15 @@ class CustomizeOptionAdd
             );
         }, $settingName, $controlOption , $settingOption);
     }
+
+    public function propertyReset($sectionMode=false)
+    {
+        $this->sectionName = "";
+        $this->settingPriority = 1;
+
+        if(!$sectionMode){
+            $this->panelName = "";
+            $this->sectionPriority = 1;
+        }
+    }
 }
