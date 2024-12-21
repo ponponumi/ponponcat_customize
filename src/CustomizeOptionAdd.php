@@ -59,4 +59,17 @@ class CustomizeOptionAdd
             );
         }, $settingName, $controlOption , $settingOption);
     }
+
+    public function settingImageSet(string $settingName, array $controlOption, array $settingOption=[])
+    {
+        $this->settingSetCore(function ($settingName, $controlOption) {
+            $this->wpCustom->add_control(
+                new \WP_Customize_Image_Contro(
+                    $this->wpCustom,
+                    $settingName,
+                    $controlOption
+                )
+            );
+        }, $settingName, $controlOption , $settingOption);
+    }
 }
