@@ -5,8 +5,8 @@ namespace Ponponumi\PonponcatCustomize;
 class CustomizeOptionAdd
 {
     private object $wpCustom;
-    private string $panelName;
-    private string $sectionName;
+    private string $panelName = "";
+    private string $sectionName = "";
     private int $sectionPriority = 1;
     private int $settingPriority = 1;
 
