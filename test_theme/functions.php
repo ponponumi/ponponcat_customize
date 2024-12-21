@@ -99,8 +99,8 @@ function test_theme_custom_simple_add($wpCustom){
         'title' => 'ロゴ設定',
     ]);
 
-    var_dump($custom->customAdd->panelNameGet());
-    var_dump($custom->customAdd->sectionNameGet());
+    // var_dump($custom->customAdd->panelNameGet());
+    // var_dump($custom->customAdd->sectionNameGet());
 
     $custom->settingImageSet("image", [
         'label' => 'ヘッダーロゴの設定',
