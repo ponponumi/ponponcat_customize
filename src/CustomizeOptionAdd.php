@@ -40,8 +40,9 @@ class CustomizeOptionAdd
         $option["panel"] = $this->panelName;
         $option["priority"] = $this->sectionPriority;
 
+        $this->propertyReset(true);
+
         $this->sectionPriority++;
-        $this->settingPriority = 1;
 
         $this->sectionName = $sectionName;
 
