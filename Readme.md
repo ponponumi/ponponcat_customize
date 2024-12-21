@@ -27,6 +27,10 @@ use Ponponumi\PonponcatCustomize\CustomizeOptionAdd;
 次のようにして、項目を追加できます。
 
 ```php
+require_once __DIR__ . "/vendor/autoload.php";
+
+use Ponponumi\PonponcatCustomize\CustomizeOptionAdd;
+
 function custom_color_add($wp_custom){
     $custom = new CustomizeOptionAdd($wp_custom);
 
