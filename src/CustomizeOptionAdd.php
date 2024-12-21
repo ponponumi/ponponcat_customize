@@ -28,6 +28,13 @@ class CustomizeOptionAdd
         $this->wpCustom->add_panel($panelName, $option);
     }
 
+    /**
+     * テーマカスタマイザーのセクションを追加します。
+     * 
+     * @param string $sectionName ここには、セクション名を入れてください。
+     * @param array $option ここには、オプションを入れてください。priority、連携するpanelは、自動入力されます。
+     * @return void
+     */
     public function sectionSet(string $sectionName,array $option)
     {
         $option["panel"] = $this->panelName;
