@@ -49,20 +49,14 @@ class CustomizeOptionAdd
 
     public function settingSet(string $settingName, array $controlOption, array $settingOption=[])
     {
-        $controlOption["section"] = $this->sectionName;
-        $controlOption["settings"] = $settingName;
-        $controlOption["priority"] = $this->settingPriority;
-
-        $this->settingPriority++;
-
-        $this->wpCustom->add_setting($settingName, $settingOption);
-
-        $this->wpCustom->add_control(
-            new \WP_Customize_Control(
-                $this->wpCustom,
-                $settingName,
-                $controlOption
-            )
-        );
+        $this->settingSetCore(function ($settingName, $controlOption) {
+            $this->wpCustom->add_control(
+                new \WP_Customize_Control(
+                    $this->wpCustom,
+                    $settingName,
+                    $controlOption
+                )
+            );
+        }, $settingName, $controlOption , $settingOption);
     }
 }
