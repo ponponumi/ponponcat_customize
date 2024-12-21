@@ -4,7 +4,7 @@ namespace Ponponumi\PonponcatCustomize;
 
 class CustomizeSimpleNameGet
 {
-    public string $themeName = "ponponcat";
+    public string $themeName;
 
     public function __construct(string $themeName = "ponponcat")
     {
