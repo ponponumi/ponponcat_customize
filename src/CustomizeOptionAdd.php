@@ -9,6 +9,7 @@ class CustomizeOptionAdd
     private string $sectionName = "";
     private int $sectionPriority = 1;
     private int $settingPriority = 1;
+    private bool $colorLoaded = false;
 
     /**
      * インスタンスを作成します。
