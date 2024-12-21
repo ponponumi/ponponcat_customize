@@ -73,6 +73,7 @@ function custom_color_add($wp_custom){
     ]);
 
     // 見出しテキストのカラーのセッティングを追加
+    // この場合、test_theme_colorというパネルと、test_theme_color_textというセクションと連携されます。
     $custom->settingSet("test_theme_color_text_hedding", [
         'label' => '見出しテキストのカラーの設定',
         'type' => 'color'
