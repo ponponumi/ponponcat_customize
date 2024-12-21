@@ -64,7 +64,7 @@ class CustomizeOptionAdd
     {
         $this->settingSetCore(function ($settingName, $controlOption) {
             $this->wpCustom->add_control(
-                new \WP_Customize_Image_Contro(
+                new \WP_Customize_Image_Control(
                     $this->wpCustom,
                     $settingName,
                     $controlOption
