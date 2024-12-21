@@ -11,10 +11,11 @@ class CustomizeOptionAddSimple
     public string $sectionName = "";
     public bool $settingNameEcho = false;
 
-    public function __construct(object $wpCustom)
+    public function __construct(object $wpCustom, string $themeName="ponponcat")
     {
         $this->customAdd = new CustomizeOptionAdd($wpCustom);
         $this->nameGet = new CustomizeSimpleNameGet();
+        $this->themeNameChange($themeName);
     }
 
     public function themeNameChange(string $themeName="ponponcat")
