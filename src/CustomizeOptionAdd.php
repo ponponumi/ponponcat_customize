@@ -126,4 +126,11 @@ class CustomizeOptionAdd
     {
         return $this->sectionName;
     }
+
+    private function panelNoSetError()
+    {
+        if($this->panelName === ""){
+            throw new \Exception("パネルが設定されていませんので、設定してください。");
+        }
+    }
 }
