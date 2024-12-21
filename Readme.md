@@ -57,6 +57,7 @@ function custom_color_add($wp_custom){
     ]);
 
     // テキストカラーのセクションを追加
+    // この場合、test_theme_colorというパネルと連携されます。
     $custom->sectionSet("test_theme_color_text", [
         'title' => 'テキストカラー設定',
     ]);
