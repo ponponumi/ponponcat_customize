@@ -24,7 +24,7 @@ class CustomizeOptionAddSimple
     public function panelSet(string $panelName,array $option)
     {
         $this->panelName = $panelName;
-        $panelName = $this->themeName . "_" . $panelName;
+        $panelName = $this->nameGet->get($panelName);
 
         $this->customAdd->panelSet($panelName, $option);
     }
