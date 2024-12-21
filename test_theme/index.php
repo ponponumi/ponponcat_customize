@@ -8,5 +8,6 @@
 <body>
     <h1><?php the_title() ?></h1>
     <div><?php the_content() ?></div>
+    <p>設定名: <?php setting_get_test() ?></p>
 </body>
 </html>
