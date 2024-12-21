@@ -33,7 +33,7 @@ class CustomizeOptionAdd
         $script = wp_script_is("wp-color-picker");
         $inline = wp_script_is("custom-color-picker-inline");
 
-        if(!$style || !$script || $inline){
+        if(!$style || !$script || !$inline){
             add_action("customize_controls_enqueue_scripts", function() use ($style, $script, $inline){
                 if(!$style){
                     wp_enqueue_style('wp-color-picker');
