@@ -63,4 +63,9 @@ class CustomizeOptionAddSimple
 
         $this->customAdd->settingImageSet($settingName, $controlOption, $settingOption);
     }
+
+    public function settingNameEchoChange(bool $newValue)
+    {
+        $this->settingNameEcho = $newValue;
+    }
 }
