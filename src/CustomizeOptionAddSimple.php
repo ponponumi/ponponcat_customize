@@ -9,6 +9,7 @@ class CustomizeOptionAddSimple
     public string $themeName = "ponponcat";
     public string $panelName = "";
     public string $sectionName = "";
+    public bool $settingNameEcho = false;
 
     public function __construct(object $wpCustom)
     {
