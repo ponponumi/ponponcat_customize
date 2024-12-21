@@ -12,7 +12,7 @@
 composer require ponponumi/ponponcat_customize
 ```
 
-## 呼び出し方法について
+## 読み込み方法について
 
 functions.phpに、次のように入力してください。(autoload.phpへのパスは、必要に応じて修正してください)
 
