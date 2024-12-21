@@ -24,6 +24,7 @@ class CustomizeOptionAdd
      */
     public function panelSet(string $panelName,array $option)
     {
+        $this->propertyReset();
         $this->panelName = $panelName;
         $this->wpCustom->add_panel($panelName, $option);
     }
