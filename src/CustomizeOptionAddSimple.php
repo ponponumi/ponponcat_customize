@@ -8,4 +8,9 @@ class CustomizeOptionAddSimple
     public string $themeName = "ponponcat";
     public string $panelName = "";
     public string $sectionName = "";
+
+    public function __construct(object $wpCustom)
+    {
+        $this->customAdd = new CustomizeOptionAdd($wpCustom);
+    }
 }
