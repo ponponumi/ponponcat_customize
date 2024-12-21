@@ -48,3 +48,21 @@ function test_theme_custom_add($wpCustom){
     ]);
 }
 add_action('customize_register', 'test_theme_custom_add');
+
+function enqueue_customizer_inline_script() {
+    // カラーピッカーのスクリプトとスタイルを読み込む
+    wp_enqueue_script('wp-color-picker');
+    wp_enqueue_style('wp-color-picker');
+
+    // インラインスクリプトを追加
+    $inline_script = <<<EOD
+    (function($) {
+        $(document).ready(function() {
+            $('.color-picker').wpColorPicker();
+        });
+    })(jQuery);
+    EOD;
+
+    wp_add_inline_script('wp-color-picker', $inline_script);
+}
+add_action('customize_controls_enqueue_scripts', 'enqueue_customizer_inline_script');
