@@ -14,10 +14,16 @@ function test_theme_custom_add($wpCustom){
         'priority' => 153,
     ]);
 
+    var_dump($custom->panelNameGet());
+    var_dump($custom->sectionNameGet());
+
     // メインカラー
     $custom->sectionSet("test_theme_color_main", [
         'title' => 'メインカラー設定',
     ]);
+
+    var_dump($custom->panelNameGet());
+    var_dump($custom->sectionNameGet());
 
     $custom->settingSet("test_theme_color_main_themecolor", [
         'label' => 'テーマカラーの設定',
@@ -31,6 +37,9 @@ function test_theme_custom_add($wpCustom){
     $custom->sectionSet("test_theme_color_text", [
         'title' => 'テキストカラー設定',
     ]);
+
+    var_dump($custom->panelNameGet());
+    var_dump($custom->sectionNameGet());
 
     $custom->settingSet("test_theme_color_text_body", [
         'label' => '本文のカラーの設定',
