@@ -14,16 +14,16 @@ function test_theme_custom_add($wpCustom){
         'priority' => 153,
     ]);
 
-    var_dump($custom->panelNameGet());
-    var_dump($custom->sectionNameGet());
+    // var_dump($custom->panelNameGet());
+    // var_dump($custom->sectionNameGet());
 
     // メインカラー
     $custom->sectionSet("test_theme_color_main", [
         'title' => 'メインカラー設定',
     ]);
 
-    var_dump($custom->panelNameGet());
-    var_dump($custom->sectionNameGet());
+    // var_dump($custom->panelNameGet());
+    // var_dump($custom->sectionNameGet());
 
     $custom->settingSet("test_theme_color_main_themecolor", [
         'label' => 'テーマカラーの設定',
@@ -38,8 +38,8 @@ function test_theme_custom_add($wpCustom){
         'title' => 'テキストカラー設定',
     ]);
 
-    var_dump($custom->panelNameGet());
-    var_dump($custom->sectionNameGet());
+    // var_dump($custom->panelNameGet());
+    // var_dump($custom->sectionNameGet());
 
     $custom->settingSet("test_theme_color_text_body", [
         'label' => '本文のカラーの設定',
@@ -62,8 +62,8 @@ function test_theme_custom_add($wpCustom){
         'priority' => 155,
     ]);
 
-    var_dump($custom->panelNameGet());
-    var_dump($custom->sectionNameGet());
+    // var_dump($custom->panelNameGet());
+    // var_dump($custom->sectionNameGet());
 }
 add_action('customize_register', 'test_theme_custom_add');
 
@@ -82,6 +82,9 @@ function test_theme_custom_simple_add($wpCustom){
     $custom->sectionSet("logo", [
         'title' => 'ロゴ設定',
     ]);
+
+    var_dump($custom->customAdd->panelNameGet());
+    var_dump($custom->customAdd->sectionNameGet());
 
     $custom->settingImageSet("image", [
         'label' => 'ヘッダーロゴの設定',
