@@ -116,4 +116,9 @@ class CustomizeOptionAdd
             $this->sectionPriority = 1;
         }
     }
+
+    public function panelNameGet(): string
+    {
+        return $this->panelName;
+    }
 }
