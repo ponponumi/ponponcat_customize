@@ -38,6 +38,16 @@ class CustomizeOptionAddSimple
         $this->customAdd->sectionSet($sectionName, $option);
     }
 
+    private function settingNameAdd($controlOption,$settingName): array
+    {
+        if($this->settingNameEcho){
+            $controlOption["description"] = $controlOption["description"] ?? "";
+            $controlOption["description"] = "設定名は、'" . $settingName . "'です。<br>" . $controlOption["description"];
+        }
+
+        return $controlOption;
+    }
+
     public function settingSet(string $settingName,array $controlOption, array $settingOption=[])
     {
         $settingName = $this->nameGet->get($this->panelName, $this->sectionName, $settingName);
