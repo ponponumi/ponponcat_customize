@@ -136,9 +136,14 @@ class CustomizeOptionAdd
 
     private function sectionNoSetError()
     {
-        
         if($this->sectionName === ""){
             throw new \Exception("セクションが設定されていませんので、設定してください。");
         }
+    }
+
+    private function panelAndSectionNoSetError()
+    {
+        $this->panelNoSetError();
+        $this->sectionNoSetError();
     }
 }
