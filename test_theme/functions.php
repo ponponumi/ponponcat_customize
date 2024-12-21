@@ -9,18 +9,18 @@ function test_theme_custom_add($wpCustom){
     $custom = new CustomizeOptionAdd($wpCustom);
 
     // カラー
-    // $custom->panelSet("test_theme_color", [
-    //     'title' => 'test_theme カラー設定',
-    //     'priority' => 153,
-    // ]);
+    $custom->panelSet("test_theme_color", [
+        'title' => 'test_theme カラー設定',
+        'priority' => 153,
+    ]);
 
     // var_dump($custom->panelNameGet());
     // var_dump($custom->sectionNameGet());
 
     // メインカラー
-    $custom->sectionSet("test_theme_color_main", [
-        'title' => 'メインカラー設定',
-    ]);
+    // $custom->sectionSet("test_theme_color_main", [
+    //     'title' => 'メインカラー設定',
+    // ]);
 
     // var_dump($custom->panelNameGet());
     // var_dump($custom->sectionNameGet());
