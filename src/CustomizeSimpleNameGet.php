@@ -11,6 +11,11 @@ class CustomizeSimpleNameGet
         $this->themeName = $themeName;
     }
 
+    public function themeNameChange(string $themeName = "ponponcat")
+    {
+        $this->themeName = $themeName;
+    }
+
     public function get(string $panelName, string $sectionName="", string $settingName=""): string
     {
         $result = $this->themeName . "_" . $panelName;
