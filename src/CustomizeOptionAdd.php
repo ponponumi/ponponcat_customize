@@ -118,6 +118,12 @@ class CustomizeOptionAdd
      */
     public function settingSet(string $settingName, array $controlOption, array $settingOption=[])
     {
+        $type = $controlOption["type"] ?? "";
+
+        if($type === "color"){
+            $this->colorPickerLoad();
+        }
+
         $this->settingSetCore(function ($settingName, $controlOption) {
             $this->wpCustom->add_control(
                 new \WP_Customize_Control(
