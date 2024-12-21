@@ -16,7 +16,7 @@ class CustomizeOptionAdd
     }
 
     /**
-     * テーマカスタマイザーのパネルを設定します。
+     * テーマカスタマイザーのパネルを追加します。
      *
      * @param string $panelName ここには、パネル名を入れてください。
      * @param array $option ここには、オプションを入れてください。
