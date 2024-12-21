@@ -53,6 +53,7 @@ add_action('customize_register', 'test_theme_custom_add');
 function test_theme_custom_simple_add($wpCustom){
     $custom = new CustomizeOptionAddSimple($wpCustom);
     $custom->themeNameChange("test_theme");
+    $custom->settingNameEcho = true;
 
     // ヘッダー
     $custom->panelSet("header", [
