@@ -10,6 +10,11 @@ class CustomizeOptionAdd
     private int $sectionPriority = 1;
     private int $settingPriority = 1;
 
+    /**
+     * インスタンスを作成します。
+     *
+     * @param object $wpCustom ここには、WordPressテーマカスタマイザーの、インスタンスを渡して下さい。
+     */
     public function __construct(object $wpCustom)
     {
         $this->wpCustom = $wpCustom;
