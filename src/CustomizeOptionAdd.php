@@ -21,6 +21,41 @@ class CustomizeOptionAdd
         $this->wpCustom = $wpCustom;
     }
 
+    public function colorPickerLoad()
+    {
+        if($this->colorLoaded){
+            return;
+        }
+
+        $this->colorLoaded = true;
+
+        $style = wp_style_is("wp-color-picker");
+        $script = wp_script_is("wp-color-picker");
+        $inline = wp_script_is("custom-color-picker-inline");
+
+        if(!$style || !$script || $inline){
+            add_action("customize_controls_enqueue_scripts", function() use ($style, $script, $inline){
+                if(!$style){
+                    wp_enqueue_style('wp-color-picker');
+                }
+
+                if(!$script){
+                    wp_enqueue_script('wp-color-picker');
+                }
+
+                if (!$inline) {
+                    wp_add_inline_script(
+                        "wp-color-picker",
+                        '(function($){$(".color-picker").wpColorPicker();})(jQuery);',
+                        "after"
+                    );
+                    wp_register_script("custom-color-picker-inline", "");
+                    wp_enqueue_script("custom-color-picker-inline");
+                }
+            });
+        }
+    }
+
     /**
      * テーマカスタマイザーのパネルを追加します。
      *
