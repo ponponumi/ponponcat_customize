@@ -47,6 +47,7 @@ function custom_color_add($wp_custom){
     ]);
 
     // テーマカラーのセッティングを追加
+    // この場合、test_theme_colorというパネルと、test_theme_color_mainというセクションと連携されます。
     $custom->settingSet("test_theme_color_main_themecolor", [
         'label' => 'テーマカラーの設定',
         'type' => 'color'
