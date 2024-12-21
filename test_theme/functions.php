@@ -73,6 +73,22 @@ function test_theme_custom_simple_add($wpCustom){
     $custom->settingSet("alt", [
         'label' => 'ロゴのalt設定',
     ]);
+
+    $custom->sectionSet("nav", [
+        'title' => 'ナビゲーション設定',
+    ]);
+
+    $custom->settingSet("list", [
+        'label' => 'リストのタグ設定',
+        'type' => 'radio',
+        'choices' => [
+            'ul' => 'ulを使う',
+            'ol' => 'olを使う',
+            'div' => 'divを使う',
+        ],
+    ],[
+        'default' => 'ul',
+    ]);
 }
 add_action('customize_register', 'test_theme_custom_simple_add');
 
