@@ -63,6 +63,7 @@ function custom_color_add($wp_custom){
     ]);
 
     // 本文のカラーのセッティングを追加
+    // この場合、test_theme_colorというパネルと、test_theme_color_textというセクションと連携されます。
     $custom->settingSet("test_theme_color_text_body", [
         'label' => '本文のカラーの設定',
         'type' => 'color'
