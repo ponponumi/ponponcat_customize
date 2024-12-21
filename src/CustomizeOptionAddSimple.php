@@ -18,7 +18,7 @@ class CustomizeOptionAddSimple
 
     public function themeNameChange(string $themeName="ponponcat")
     {
-        $this->themeName = $themeName;
+        $this->nameGet->themeNameChange($themeName);
     }
 
     public function panelSet(string $panelName,array $option)
