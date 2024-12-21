@@ -121,4 +121,9 @@ class CustomizeOptionAdd
     {
         return $this->panelName;
     }
+
+    public function sectionNameGet(): string
+    {
+        return $this->sectionName;
+    }
 }
