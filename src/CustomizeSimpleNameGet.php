@@ -18,18 +18,6 @@ class CustomizeSimpleNameGet
 
     public function get(string $panelName, string $sectionName="", string $settingName=""): string
     {
-        $result = $this->themeName . "_" . $panelName;
-
-        if($sectionName === ""){
-            return $result;
-        }
-
-        $result .= "_" . $sectionName;
-
-        if($settingName === ""){
-            return $result;
-        }
-
-        return $result . "_" . $settingName;
+        return CustomizeSimpleNameGetStatic::get($this->themeName, $panelName, $sectionName, $settingName);
     }
 }
