@@ -47,6 +47,11 @@ function test_theme_custom_add($wpCustom){
         'default' => '#222222',
         'transport' => 'refresh',
     ]);
+
+    $custom->panelSet("test_theme_javascript", [
+        'title' => 'test_theme JavaScript設定',
+        'priority' => 155,
+    ]);
 }
 add_action('customize_register', 'test_theme_custom_add');
 
