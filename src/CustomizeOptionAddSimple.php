@@ -42,4 +42,10 @@ class CustomizeOptionAddSimple
         $settingName = $this->nameGet->get($this->panelName, $this->sectionName, $settingName);
         $this->customAdd->settingSet($settingName, $controlOption, $settingOption);
     }
+
+    public function settingImageSet(string $settingName,array $controlOption, array $settingOption=[])
+    {
+        $settingName = $this->nameGet->get($this->panelName, $this->sectionName, $settingName);
+        $this->customAdd->settingImageSet($settingName, $controlOption, $settingOption);
+    }
 }
