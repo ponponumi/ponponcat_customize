@@ -30,7 +30,7 @@ class CustomizeOptionAdd
 
     /**
      * テーマカスタマイザーのセクションを追加します。
-     * 
+     *
      * @param string $sectionName ここには、セクション名を入れてください。
      * @param array $option ここには、オプションを入れてください。priority、連携するpanelは、自動入力されます。
      * @return void
@@ -63,7 +63,7 @@ class CustomizeOptionAdd
 
     /**
      * テーマカスタマイザーのセッティングとコントロールを追加します。
-     * 
+     *
      * @param string $settingName ここには、セッティング名を入力してください。これは、カスタマイザーの設定を取得する時に使います。
      * @param array $controlOption ここには、コントロールのオプションを入力してください。priority、連携するpanelとsectionは、自動入力されます。
      * @param array $settingOption ここには、セッティングのオプションを入力してください。省略した場合は空の配列となります。
@@ -82,6 +82,15 @@ class CustomizeOptionAdd
         }, $settingName, $controlOption , $settingOption);
     }
 
+
+    /**
+     * テーマカスタマイザーの、画像タイプのセッティングとコントロールを追加します。
+     *
+     * @param string $settingName ここには、セッティング名を入力してください。これは、カスタマイザーの設定を取得する時に使います。
+     * @param array $controlOption ここには、コントロールのオプションを入力してください。priority、連携するpanelとsectionは、自動入力されます。
+     * @param array $settingOption ここには、セッティングのオプションを入力してください。省略した場合は空の配列となります。
+     * @return void
+     */
     public function settingImageSet(string $settingName, array $controlOption, array $settingOption=[])
     {
         $this->settingSetCore(function ($settingName, $controlOption) {
