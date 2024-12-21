@@ -52,6 +52,9 @@ function test_theme_custom_add($wpCustom){
         'title' => 'test_theme JavaScript設定',
         'priority' => 155,
     ]);
+
+    var_dump($custom->panelNameGet());
+    var_dump($custom->sectionNameGet());
 }
 add_action('customize_register', 'test_theme_custom_add');
 
