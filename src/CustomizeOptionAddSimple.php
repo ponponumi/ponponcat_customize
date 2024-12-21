@@ -5,6 +5,7 @@ namespace Ponponumi\PonponcatCustomize;
 class CustomizeOptionAddSimple
 {
     public object $customAdd;
+    public object $nameGet;
     public string $themeName = "ponponcat";
     public string $panelName = "";
     public string $sectionName = "";
@@ -12,6 +13,7 @@ class CustomizeOptionAddSimple
     public function __construct(object $wpCustom)
     {
         $this->customAdd = new CustomizeOptionAdd($wpCustom);
+        $this->nameGet = new CustomizeSimpleNameGet();
     }
 
     public function themeNameChange(string $themeName="ponponcat")
