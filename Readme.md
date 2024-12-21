@@ -102,7 +102,8 @@ function custom_color_add($wp_custom){
     $custom->themeNameChange("test_theme");
 
     // カラーのパネルを追加
-    // パネル名は「${themeName}_${panelName}」となるため、この場合は「test_theme_color」になります。
+    // パネル名は「${themeName}_${panelName}」となります。
+    // この場合は「test_theme_color」になります。
     $custom->panelSet("color", [
         'title' => 'test_theme カラー設定',
         'priority' => 151,
@@ -110,14 +111,16 @@ function custom_color_add($wp_custom){
 
     // メインカラーのセクションを追加
     // この場合、test_theme_colorというパネルと連携されます。
-    // セクション名は「${themeName}_${panelName}_${sectionName}」となるため、この場合は「test_theme_color_main」になります。
+    // セクション名は「${themeName}_${panelName}_${sectionName}」となります。
+    // この場合は「test_theme_color_main」になります。
     $custom->sectionSet("main", [
         'title' => 'メインカラー設定',
     ]);
 
     // テーマカラーのセッティングを追加
     // この場合、test_theme_colorというパネルと、test_theme_color_mainというセクションと連携されます。
-    // 設定名は「${themeName}_${panelName}_${sectionName}_${setting}」となるため、この場合は「test_theme_color_main_themecolor」になります。
+    // 設定名は「${themeName}_${panelName}_${sectionName}_${setting}」となります。
+    // この場合は「test_theme_color_main_themecolor」になります。
     $custom->settingSet("themecolor", [
         'label' => 'テーマカラーの設定',
         'type' => 'color'
@@ -128,14 +131,16 @@ function custom_color_add($wp_custom){
 
     // テキストカラーのセクションを追加
     // この場合、test_theme_colorというパネルと連携されます。
-    // セクション名は「${themeName}_${panelName}_${sectionName}」となるため、この場合は「test_theme_color_text」になります。
+    // セクション名は「${themeName}_${panelName}_${sectionName}」となります。
+    // この場合は「test_theme_color_text」になります。
     $custom->sectionSet("text", [
         'title' => 'テキストカラー設定',
     ]);
 
     // 本文のカラーのセッティングを追加
     // この場合、test_theme_colorというパネルと、test_theme_color_textというセクションと連携されます。
-    // 設定名は「${themeName}_${panelName}_${sectionName}_${setting}」となるため、この場合は「test_theme_color_text_body」になります。
+    // 設定名は「${themeName}_${panelName}_${sectionName}_${setting}」となります。
+    // この場合は「test_theme_color_text_body」になります。
     $custom->settingSet("body", [
         'label' => '本文のカラーの設定',
         'type' => 'color'
@@ -146,7 +151,8 @@ function custom_color_add($wp_custom){
 
     // 見出しテキストのカラーのセッティングを追加
     // この場合、test_theme_colorというパネルと、test_theme_color_textというセクションと連携されます。
-    // 設定名は「${themeName}_${panelName}_${sectionName}_${setting}」となるため、この場合は「test_theme_color_text_hedding」になります。
+    // 設定名は「${themeName}_${panelName}_${sectionName}_${setting}」となります。
+    // この場合は「test_theme_color_text_hedding」になります。
     $custom->settingSet("hedding", [
         'label' => '見出しテキストのカラーの設定',
         'type' => 'color'
