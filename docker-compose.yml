@@ -11,7 +11,7 @@ services:
             WORDPRESS_DEBUG: ${WORDPRESS_DEBUG:-0}
         volumes:
             - ./test_theme:/var/www/html/wp-content/themes/test_theme
-            - ./src:/var/www/html/wp-content/themes/test_theme
+            - ./src:/var/www/html/wp-content/themes/test_theme/src
             - ./html:/var/www/html/
             - ./vendor:/var/www/html/wp-content/themes/test_theme/vendor
         depends_on:
