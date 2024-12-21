@@ -133,4 +133,12 @@ class CustomizeOptionAdd
             throw new \Exception("パネルが設定されていませんので、設定してください。");
         }
     }
+
+    private function sectionNoSetError()
+    {
+        
+        if($this->sectionName === ""){
+            throw new \Exception("セクションが設定されていませんので、設定してください。");
+        }
+    }
 }
