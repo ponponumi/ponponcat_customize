@@ -69,6 +69,10 @@ function test_theme_custom_simple_add($wpCustom){
     $custom->settingImageSet("image", [
         'label' => 'ヘッダーロゴの設定',
     ]);
+
+    $custom->settingSet("alt", [
+        'label' => 'ロゴのalt設定',
+    ]);
 }
 add_action('customize_register', 'test_theme_custom_simple_add');
 
