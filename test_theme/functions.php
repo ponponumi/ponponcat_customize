@@ -3,6 +3,7 @@
 require_once __DIR__ . "/vendor/autoload.php";
 
 use Ponponumi\PonponcatCustomize\CustomizeOptionAdd;
+use Ponponumi\PonponcatCustomize\CustomizeOptionAddSimple;
 
 function test_theme_custom_add($wpCustom){
     $custom = new CustomizeOptionAdd($wpCustom);
@@ -48,6 +49,27 @@ function test_theme_custom_add($wpCustom){
     ]);
 }
 add_action('customize_register', 'test_theme_custom_add');
+
+function test_theme_custom_simple_add($wpCustom){
+    $custom = new CustomizeOptionAddSimple($wpCustom);
+    $custom->themeNameChange("test_theme");
+
+    // ヘッダー
+    $custom->panelSet("header", [
+        'title' => 'test_theme ヘッダー設定',
+        'priority' => 154,
+    ]);
+
+    // メインカラー
+    $custom->sectionSet("logo", [
+        'title' => 'ロゴ設定',
+    ]);
+
+    $custom->settingImageSet("image", [
+        'label' => 'ヘッダーロゴの設定',
+    ]);
+}
+add_action('customize_register', 'test_theme_custom_simple_add');
 
 function enqueue_customizer_inline_script() {
     // カラーピッカーのスクリプトとスタイルを読み込む
