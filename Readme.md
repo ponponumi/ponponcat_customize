@@ -174,7 +174,7 @@ require_once __DIR__ . "/vendor/autoload.php";
 use Ponponumi\PonponcatCustomize\CustomizeSimpleNameGetStatic;
 
 $bodyTextColor = CustomizeSimpleNameGetStatic::get("test_theme","color","text","body");
-var_dump($bodyTextColor);   //
+var_dump($bodyTextColor);   // string(26) "test_theme_color_text_body"
 ```
 
 ## CustomizeOptionAddクラス、CustomizeOptionAddSimpleクラスの実行の注意点
