@@ -52,6 +52,8 @@ class CustomizeOptionAdd
 
     private function settingSetCore(callable $addControl, string $settingName, array $controlOption, array $settingOption=[])
     {
+        $this->panelAndSectionNoSetError();
+
         $controlOption["section"] = $this->sectionName;
         $controlOption["settings"] = $settingName;
         $controlOption["priority"] = $this->settingPriority;
